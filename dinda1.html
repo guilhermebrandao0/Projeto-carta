@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Minha Dinda ❤️</title>
+  <link rel="shortcut icon" href="coracao.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff, #c3cfe2);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      padding: 70px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 25px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease-in-out;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 2;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    }
+
+    .signature {
+      margin-top: 35px;
+      font-size: 1.8rem;
+      font-style: italic;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      opacity: 0.75;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para Minha Dinda ❤️</h1>
+    <p>
+      Dinda, hoje quero dedicar estas palavras a você,
+      uma pessoa tão especial,
+      tão importante,
+      e tão presente em tantos momentos da minha vida.
+      <br><br>
+      Sua existência é um presente,
+      sua presença transmite carinho,
+      e seu coração é cheio de bondade.
+      <br><br>
+      Obrigado por cada conselho,
+      por cada sorriso,
+      por cada gesto de cuidado,
+      e por toda atenção que sempre me ofereceu.
+      <br><br>
+      Você não é apenas minha dinda,
+      mas também alguém que admiro profundamente,
+      alguém que representa amor,
+      apoio,
+      força,
+      e carinho verdadeiro.
+      <br><br>
+      Em muitos momentos,
+      suas palavras fizeram diferença,
+      seu incentivo me fortaleceu,
+      e sua presença trouxe conforto.
+      <br><br>
+      Sou grato por todo carinho,
+      por toda torcida,
+      e por todo amor demonstrado ao longo da minha vida.
+      <br><br>
+      Sua generosidade,
+      sua luz,
+      e sua forma especial de cuidar
+      fazem de você uma pessoa inesquecível.
+      <br><br>
+      Hoje quero que saiba
+      o quanto você é importante para mim,
+      o quanto sua presença é valiosa,
+      e o quanto sou feliz por ter você na minha caminhada.
+      <br><br>
+      Que sua vida seja sempre repleta de paz,
+      felicidade,
+      saúde,
+      amor,
+      e sonhos realizados.
+      <br><br>
+      Que Deus continue iluminando seus passos,
+      fortalecendo seu coração,
+      e abençoando cada dia seu.
+      <br><br>
+      Obrigado por ser essa pessoa incrível,
+      cheia de amor,
+      carinho,
+      e inspiração.
+      <br><br>
+      Sua importância vai muito além das palavras,
+      porque pessoas como você
+      deixam marcas eternas no coração.
+      <br><br>
+      Nunca se esqueça
+      do quanto você é querida,
+      especial,
+      admirada,
+      e amada.
+      <br><br>
+      Eu sempre vou guardar com carinho
+      tudo aquilo que representa para mim.
+      <br><br>
+      Obrigado por existir,
+      por ser essa dinda maravilhosa,
+      e por fazer parte da minha vida de forma tão especial.
+      <br><br>
+      Com todo meu carinho,
+      gratidão,
+      e amor,
+      esta homenagem é para você.
+      <br><br>
+      Você merece o melhor hoje,
+      amanhã,
+      e sempre.
+      <br><br>
+      Te adoro para sempre ❤️
+    </p>
+    <div class="signature">Assinado: G ❤️</div>
+  </div>
+
+  <script>
+    const symbols = ['🌸', '💙', '✨', '❤️'];
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      document.body.appendChild(flower);
+      setTimeout(() => flower.remove(), 10000);
+    }
+    setInterval(createFlower, 400);
+  </script>
+</body>
+</html>
