@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia das Mães ❤️</title>
+    <link rel="shortcut icon" href="coracao.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: linear-gradient(135deg, #ff9966, #ff5e62, #ffc371);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      padding: 70px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 25px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease-in-out;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 2;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    }
+
+    .signature {
+      margin-top: 35px;
+      font-size: 1.8rem;
+      font-style: italic;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      opacity: 0.75;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Dia das Mães ❤️</h1>
+    <p>
+      Mãe, hoje eu quero dedicar estas palavras à pessoa mais importante da minha vida.
+      <br><br>
+      Desde o meu primeiro momento, foi o seu amor que me envolveu,
+      seu cuidado que me protegeu,
+      e sua força que me guiou por cada etapa do caminho.
+      <br><br>
+      Você esteve presente nos meus dias mais felizes,
+      mas também foi meu refúgio nos momentos difíceis.
+      <br><br>
+      Obrigado por cada noite mal dormida,
+      por cada preocupação silenciosa,
+      por cada conselho,
+      por cada abraço,
+      e por cada gesto de amor que muitas vezes passou despercebido,
+      mas que fez toda diferença na minha vida.
+      <br><br>
+      Seu coração gigante,
+      sua dedicação infinita,
+      e sua capacidade de amar sem limites
+      fazem de você alguém verdadeiramente especial.
+      <br><br>
+      Você me ensinou valores,
+      me mostrou o caminho certo,
+      me ajudou a levantar quando pensei em desistir,
+      e nunca soltou minha mão.
+      <br><br>
+      Seu amor é minha base,
+      sua presença é meu conforto,
+      e sua existência é um presente que agradeço todos os dias.
+      <br><br>
+      Mãe,
+      não existem palavras suficientes para descrever o quanto sou grato por tudo que a senhora faz.
+      <br><br>
+      Obrigado por acreditar em mim,
+      mesmo quando eu duvidei de mim mesmo.
+      <br><br>
+      Obrigado por lutar por mim,
+      por sonhar comigo,
+      e por sempre querer o melhor para minha vida.
+      <br><br>
+      Sua bondade,
+      sua coragem,
+      e seu amor incondicional
+      são inspirações eternas.
+      <br><br>
+      Neste Dia das Mães,
+      quero que a senhora se lembre do quanto é amada,
+      admirada,
+      valorizada,
+      e importante.
+      <br><br>
+      Que nunca faltem motivos para sorrir,
+      paz para seu coração,
+      e felicidade em sua caminhada.
+      <br><br>
+      Eu prometo sempre estar aqui,
+      para apoiar,
+      proteger,
+      cuidar,
+      e retribuir ao menos uma parte de todo amor que recebi.
+      <br><br>
+      Você é meu exemplo,
+      minha fortaleza,
+      meu orgulho,
+      e meu maior amor.
+      <br><br>
+      Que Deus abençoe sua vida,
+      sua saúde,
+      seus sonhos,
+      e cada passo seu.
+      <br><br>
+      Obrigado por ser exatamente quem você é:
+      uma mãe incrível,
+      insubstituível,
+      e eterna no meu coração.
+      <br><br>
+      Eu te amo hoje,
+      amanhã,
+      e para sempre.
+      <br><br>
+      Feliz Dia das Mães ❤️
+    </p>
+    <div class="signature">Assinado: G ❤️</div>
+  </div>
+
+  <script>
+    const symbols = ['🌸', '💖', '🌷', '❤️'];
+
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 10000);
+    }
+
+    setInterval(createFlower, 400);
+  </script>
+</body>
+</html>

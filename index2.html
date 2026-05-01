@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia das Mães ❤️</title>
+  <link rel="shortcut icon" href="coracao.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      padding: 40px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 25px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease-in-out;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    }
+
+    .signature {
+      margin-top: 35px;
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 24px;
+      animation: float 10s linear infinite;
+      opacity: 0.75;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Dia das Mães ❤️</h1>
+    <p>
+      Mãe, seu amor é meu maior presente,
+      sua força é minha inspiração,
+      e seu carinho faz meus dias mais felizes.
+      <br><br>
+      Obrigado por cada abraço, cada conselho
+      e por nunca soltar minha mão.
+      <br><br>
+      Hoje e sempre, quero que saiba
+      o quanto você é especial para mim.
+    </p>
+    <div class="signature">Assinado: G ❤️</div>
+  </div>
+
+  <script>
+    const symbols = ['🌸', '💖', '🌷', '❤️'];
+
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 10000);
+    }
+
+    setInterval(createFlower, 400);
+  </script>
+</body>
+</html>
